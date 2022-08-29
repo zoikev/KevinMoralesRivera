@@ -1,0 +1,202 @@
+/*_________________________________________________________________TOP PAGE_________________________________________________________________*/
+:root {
+    --screen: 76.8rem;
+    --headerheight: 50px;
+    --botton_height: 49px;
+
+    --red_li: #ff8080;
+    --yel_li: #ffff7b; 
+    --gre_li: #7bfa7b; 
+    --blu_li: #80c4fc; 
+    --pur_li: #e57dff; 
+
+    --red_bri: red;
+    --yel_bri: gold; 
+    --gre_bri: limeGreen; 
+    --blu_bri: DeepSkyBlue; 
+    --pur_bri: mediumvioletred; 
+
+    --red_drk: #d43333;
+    --yel_drk: #d3a708; 
+    --gre_drk: #28992e; 
+    --blu_drk: #2975c0; 
+    --pur_drk: #963296; 
+
+    --background_black: #111c22;
+    --background_dark: #424b4e;
+    --background_mid: #7e858a;
+    --background_bright: #caced4;
+    --background_white: #f1f2f6;
+    
+    --border_black: black;
+    --border_white: white;
+    --text_black: black;
+    --text_white: white;
+
+    --black: black;
+    --dark: #464646;
+    --greyli: #d1d1d1;
+    --white: white;
+    
+    --icons: white;
+    --img_black: "inline";
+    --img_white: "none";
+    
+    --back_dark: linear-gradient(to top, #1d2b33,  #7e858a, #7e858a);
+    --back_grey: linear-gradient(to top, #8a8c9b,  white, white);
+}
+* {
+    box-sizing: border-box;
+}
+html { 
+    font-size: 62.5%;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif; 
+    min-width: 320px;
+    font-size: 1.6rem;
+    background-image: var(--back_dark);
+}
+
+/*UTILITIES*/  
+h1 {font-size: 3.2rem;}
+h2 {font-size: 2.4rem;}
+h3 {font-size: 1.87rem;}
+h4 {font-size: 1.6rem;}
+h5 {font-size: 1.32rem;}
+h6 {font-size: 1.07rem;}
+h1, h2, h3, h4, h5, h6 {font-family: Georgia, 'Times New Roman', Times, serif;}
+p {font-size: 1.6rem;}
+
+button {cursor: pointer;}
+
+.pageContainer {
+    margin: 0 auto;
+    max-width: var(--screen);
+    background: var(--background_white);
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    "header header"
+    "nav nav"
+    "main main"
+    "aside aside"
+    "footer footer";
+}
+
+/* HEADER */
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 50px auto;
+    align-items: center;
+}
+header img {
+    width: 50px;
+}
+header h1, h2 {
+    text-align: center;
+}
+
+/* NAV */
+nav {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+nav a {
+    height: 40px;
+    padding: 5px;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    background: #1d2b33;
+    color: white;
+    border-right: 1px solid white
+}
+nav a:last-child {
+    border: none;
+}
+nav .nav_icon {
+    font-size: 30px;
+    color: white;
+}
+nav .nav_link_text {
+    display: none;
+}
+
+
+/* MAIN */
+main {
+    grid-area: main;
+    padding: 16px;
+}
+.main_education, .main_skills {
+    border-left: 16px solid var(--blu_drk);
+    padding-left: 16px;
+}
+.education_item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.education_item h4 {
+    width: 100%;
+}
+.main_education img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+}
+.img_large {
+    height: 50px;
+}
+
+/* ASIDE */
+aside {
+    grid-area: aside;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    min-height: var(--headerheight);
+    padding: 16px;
+    background: var(--background_dark);
+    color: var(--text_white);
+    grid-area: footer;
+}
+footer h4 {
+    text-align: center;
+}
+
+/*contact_buttons*/
+.contact_buttons {
+    width: 100%;
+    padding: 10px 16px 0 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.contact_buttons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+.icon_med  {
+    padding: 8px;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+  }  
+.fa:hover {opacity: 0.7;}
+.fa-whatsapp {background: #25D366;}
+.fa-facebook {background: #3B5998;}
+.icon_mail {background: #e4d61a;}
+.fa-twitter {background: #55ACEE;}
+.fa-linkedin {background: #007bb5;}
+.fa-youtube {background: #bb0000;}
