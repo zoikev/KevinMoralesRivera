@@ -1,27 +1,9 @@
 /*_________________________________________________________________TOP PAGE_________________________________________________________________*/
 :root {
-    --screen: 76.8rem;
-    --headerheight: 50px;
-    --botton_height: 49px;
 
-    --red_li: #ff8080;
-    --yel_li: #ffff7b; 
-    --gre_li: #7bfa7b; 
     --blu_li: #80c4fc; 
-    --pur_li: #e57dff; 
-
-    --red_bri: red;
-    --yel_bri: gold; 
-    --gre_bri: limeGreen; 
     --blu_bri: DeepSkyBlue; 
-    --pur_bri: mediumvioletred; 
-
-    --red_drk: #d43333;
-    --yel_drk: #d3a708; 
-    --gre_drk: #28992e; 
     --blu_drk: #2975c0; 
-    --pur_drk: #963296; 
-
     --background_black: #111c22;
     --background_dark: #424b4e;
     --background_mid: #7e858a;
@@ -48,31 +30,20 @@
 * {
     box-sizing: border-box;
 }
-html { 
-    font-size: 62.5%;
-}
 body {
     font-family: Arial, Helvetica, sans-serif; 
     min-width: 320px;
-    font-size: 1.6rem;
     background-image: var(--back_dark);
 }
 
 /*UTILITIES*/  
-h1 {font-size: 3.2rem;}
-h2 {font-size: 2.4rem;}
-h3 {font-size: 1.87rem;}
-h4 {font-size: 1.6rem;}
-h5 {font-size: 1.32rem;}
-h6 {font-size: 1.07rem;}
 h1, h2, h3, h4, h5, h6 {font-family: Georgia, 'Times New Roman', Times, serif;}
-p {font-size: 1.6rem;}
 
 button {cursor: pointer;}
 
 .pageContainer {
     margin: 0 auto;
-    max-width: var(--screen);
+    max-width: 920px;
     background: var(--background_white);
     display: grid;
     grid-template-columns: 50px auto;
@@ -134,7 +105,7 @@ main {
     grid-area: main;
     padding: 16px;
 }
-.main_education, .main_skills {
+.main_education, .main_skills, .main_portfolio {
     border-left: 16px solid var(--blu_drk);
     padding-left: 16px;
 }
@@ -154,11 +125,10 @@ main {
 .img_large {
     height: 50px;
 }
-
-/* ASIDE */
-aside {
-    grid-area: aside;
+.img_games {
+    height: 200px;
 }
+
 
 /* FOOTER */
 footer {
@@ -185,6 +155,7 @@ footer h4 {
     width: 40px;
     height: 40px;
 }
+/*ICONS*/
 .icon_med  {
     padding: 8px;
     font-size: 25px;
@@ -200,3 +171,6 @@ footer h4 {
 .fa-twitter {background: #55ACEE;}
 .fa-linkedin {background: #007bb5;}
 .fa-youtube {background: #bb0000;}
+
+
+@media only screen and (max-width: 600px) {}

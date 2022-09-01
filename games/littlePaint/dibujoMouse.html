@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujos canvas</title>
+    <style>
+      body {
+        margin: auto;
+        max-width: 920px;
+      }
+      canvas {
+        border: 1px solid #000000;
+      }
+      .paintArea {
+        max-width: 920px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>Fondo</p>
+      <input type="button" id="background5" style="background-color: #ffffff;" onclick="document.getElementById('area_dibujo').style.background ='#ffffff'">
+      <input type="button" id="background1" style="background-color: #d3afa9;" onclick="document.getElementById('area_dibujo').style.background ='#d3afa9'">
+      <input type="button" id="background2" style="background-color: #e9e77a;" onclick="document.getElementById('area_dibujo').style.background ='#e9e77a'">
+      <input type="button" id="background3" style="background-color: #97e095;" onclick="document.getElementById('area_dibujo').style.background ='#97e095'">
+      <input type="button" id="background4" style="background-color: #8caee2;" onclick="document.getElementById('area_dibujo').style.background ='#8caee2'">
+      <input type="button" id="background6" style="background-color: #000000;" onclick="document.getElementById('area_dibujo').style.background ='#000000'">
+    </div>
+    <div>
+      <p>Selecciona el color del trazo:
+      <input type="color" id="colorTrazo" name="favcolorT" value="#000000"> </p>      
+      <p>Selecciona el grosor del trazo:
+        <input type="range" id="grosorTrazo" name="grosorTrazo" min="1" max="8" value="3"> </p>
+      <br>
+    </div>
+    <div class="paintArea">      
+      <canvas id="area_dibujo"></canvas>
+      <p>Dibuja, escribe o haz apuntes.</p>
+    </div>
+
+    <script src="scriptDibujo2.js"></script>
+
+    <!-- <script>
+      var estado = false;          // estado del click      
+      var area = document.getElementById('area_dibujo');
+      var papel = area.getContext("2d");
+      var xMouse;                      // guardar coordenada en X
+      var yMouse;                      // guardar coordenada en Y
+      area.addEventListener("mousedown",presionarMouse);  //cuando presionas click
+      area.addEventListener("mouseup",soltarMouse);       //cuando sueltas click
+      
+      area.addEventListener("touchstart",presionarMouse);  //cuando presionas click
+      area.addEventListener("touchend",soltarMouse);       //cuando sueltas click
+
+      // Funcion para mousemove
+      function dibujarMouse(evento){
+        var colorLinea = document.getElementById("colorTrazo").value;    // color a la linea
+        var gruesoLinea = document.getElementById("grosorTrazo").value;
+        if (estado == true) {   // solo se dibujara si esta el click del mouse presionado
+          dibujarLinea(colorLinea, gruesoLinea, xMouse, yMouse, evento.layerX, evento.layerY, papel);
+        }
+        xMouse = evento.layerX;
+        yMouse = evento.layerY;
+      }
+
+      // Funcion para mousedown
+      function presionarMouse(mousePosition){
+        var xpoint = mousePosition.layerX;
+        var ypoint = mousePosition.layerY;
+        var colorLinea = document.getElementById("colorTrazo").value;    // color a la linea
+        var gruesoLinea = document.getElementById("grosorTrazo").value;
+        if (gruesoLinea>2) {
+          dibujarLinea(colorLinea, gruesoLinea, xpoint - 1, ypoint - 1, xpoint + 1, ypoint + 1, papel);
+          dibujarLinea(colorLinea, gruesoLinea, xpoint + 1, ypoint - 1, xpoint - 1, ypoint + 1, papel);
+          dibujarLinea(colorLinea, gruesoLinea, xpoint - 1, ypoint, xpoint + 1, ypoint, papel);
+          dibujarLinea(colorLinea, gruesoLinea, xpoint, ypoint - 1, xpoint, ypoint + 1, papel);
+        }
+
+        area.addEventListener("mousemove",dibujarMouse);    //cuando mueves el mouse
+        area.addEventListener("touchmove",dibujarMouse);    //cuando mueves el mouse
+        estado = true;         //click presionado
+      }
+
+      // Funcion para mouseup
+      function soltarMouse(){
+        estado = false;         // click suelto
+      }
+      function dibujarLinea(color, grueso, xinicial, yinicial, xfinal, yfinal, lienzo){
+        lienzo.beginPath();                  // Inicia el trazo
+        lienzo.strokeStyle = color;          // Estilo de trazo (color)
+        lienzo.lineWidth = grueso;                // Ancho de la linea
+        lienzo.moveTo(xinicial, yinicial);   // Donde comienza la linea
+        lienzo.lineTo(xfinal, yfinal);       // Traza la linea (ubica punto final)
+        lienzo.stroke();                     // Dibuja con el estilo de trazo
+        lienzo.closePath();                  // Cierra el dibujo
+      }
+    </script> -->
+  </body>
+</html>
