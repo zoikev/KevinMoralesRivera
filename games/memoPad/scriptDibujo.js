@@ -47,3 +47,7 @@ function dibujarLinea(color, grueso, xinicial, yinicial, xfinal, yfinal, lienzo)
   lienzo.stroke();                     // Dibuja con el estilo de trazo
   lienzo.closePath();                  // Cierra el dibujo
 }
+
+function resetMemoPad() {
+  location.reload()
+}

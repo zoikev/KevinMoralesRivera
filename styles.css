@@ -1,39 +1,11 @@
 /*_________________________________________________________________TOP PAGE_________________________________________________________________*/
-:root {
-
-    --blu_li: #80c4fc; 
-    --blu_bri: DeepSkyBlue; 
-    --blu_drk: #2975c0; 
-    --background_black: #111c22;
-    --background_dark: #424b4e;
-    --background_mid: #7e858a;
-    --background_bright: #caced4;
-    --background_white: #f1f2f6;
-    
-    --border_black: black;
-    --border_white: white;
-    --text_black: black;
-    --text_white: white;
-
-    --black: black;
-    --dark: #464646;
-    --greyli: #d1d1d1;
-    --white: white;
-    
-    --icons: white;
-    --img_black: "inline";
-    --img_white: "none";
-    
-    --back_dark: linear-gradient(to top, #1d2b33,  #7e858a, #7e858a);
-    --back_grey: linear-gradient(to top, #8a8c9b,  white, white);
-}
 * {
     box-sizing: border-box;
 }
 body {
     font-family: Arial, Helvetica, sans-serif; 
     min-width: 320px;
-    background-image: var(--back_dark);
+    background-image: linear-gradient(to top, #1d2b33,  #7e858a, #7e858a);
 }
 
 /*UTILITIES*/  
@@ -44,7 +16,7 @@ button {cursor: pointer;}
 .pageContainer {
     margin: 0 auto;
     max-width: 920px;
-    background: var(--background_white);
+    background: white;
     display: grid;
     grid-template-columns: 50px auto;
     grid-template-rows: repeat(5, auto);
@@ -106,7 +78,7 @@ main {
     padding: 16px;
 }
 .main_education, .main_skills, .main_portfolio {
-    border-left: 16px solid var(--blu_drk);
+    border-left: 16px solid #2975c0;
     padding-left: 16px;
 }
 .education_item {
@@ -133,10 +105,9 @@ main {
 /* FOOTER */
 footer {
     width: 100%;
-    min-height: var(--headerheight);
     padding: 16px;
-    background: var(--background_dark);
-    color: var(--text_white);
+    background: #424b4e;
+    color: white;
     grid-area: footer;
 }
 footer h4 {
